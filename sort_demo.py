@@ -9,7 +9,8 @@ on the Package class.
 
 from shipping.package import sort, Stacks
 
-# List of tuples of the form ([width, height, length, weight], expected_output, description)
+# List of tuples of the form:
+#   ([width, height, length, weight], expected_output, description)
 packages = [
     (
         [30, 20, 10, 5.0],
@@ -42,8 +43,9 @@ packages = [
 for dimensions, expected_output, desc in packages:
     result = sort(*dimensions)
     print(
-        f"Testing package: {desc}({expected_output}):\t{result == expected_output}"
+        f"Testing package: {desc}({expected_output}):\t" \
+        f"{result == expected_output}"
     )
 
-    # Uncomment if you want to run the assertion instead of just printing the result
-    # assert result == expected_output
+    # Uncomment if you want to run the assertion instead of just printing the 
+    # result assert result == expected_output
