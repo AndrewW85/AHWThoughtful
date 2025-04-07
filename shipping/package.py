@@ -62,7 +62,8 @@ class Package:
         Check if any dimension exceeds the maximum allowed dimension.
 
         Returns:
-            bool: True if any dimension exceeds max_dimension, False otherwise
+            bool: True if any dimension exceeds max_dimension, 
+                    False otherwise
         """
         return any(
             dim >= self.MAX_DIMENSION
@@ -71,8 +72,8 @@ class Package:
 
     def sort(self) -> str:
         """
-        Sort a package into one of three categories based on size and weight 
-        and return the category as a string
+        Sort a package into one of three categories based on size and 
+        weight and return the category as a string
         """
         if self.is_bulky() and self.is_heavy():
             return Stacks.REJECTED.value
@@ -86,7 +87,7 @@ def sort(width, height, length, mass):
     """
     Sort a package into one of three categories based on the dimensions and
     weight of the package.
-    
+
     Args:
         width (float): Width of the package in centimeters
         height (float): Height of the package in centimeters
