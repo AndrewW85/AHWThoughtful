@@ -1,4 +1,4 @@
-entrypoint = "main.py"
+entrypoint = "sort_demo.py"
 modules = ["python-3.11"]
 
 [nix]
