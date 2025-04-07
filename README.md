@@ -6,7 +6,7 @@ This package contains the code used for Andrew Wiser's live coding exercise for 
 
 1. Clone the repository:
 ```bash
-git clone <https://github.com/AndrewW85/AHWThoughtful>
+git clone https://github.com/AndrewW85/AHWThoughtful
 cd thoughtful
 ```
 
