@@ -1,7 +1,7 @@
 [project]
-name = "python-template"
+name = "thoughtful"
 version = "0.1.0"
-description = ""
-authors = ["Your Name <you@example.com>"]
+description = "This is a Python project for Andrew Wiser's interview with Thoughtful AI"
+authors = ["Andrew Wiser <andrew.wiser85@gmail.com>"]
 requires-python = ">=3.11"
 dependencies = []
