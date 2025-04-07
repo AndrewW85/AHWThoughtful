@@ -20,6 +20,15 @@ uv venv
 uv pip install --group dev
 ```
 
+## Running the Code
+This repository includes two options for running the code, a simple sort_demo.py script that will output lines that contain a description, expected sort class, and either True/False indicating if calling the sort() function output the expected values. The second method uses the Python unittest module to test a whether the basic sort functionality is working as expected.
+
+### Running the Demo Script
+To run the sort_demo.py script:
+```bash
+uv run python sort_demo.py
+```
+
 ### Running Tests
 
 To run all tests:
@@ -57,9 +66,3 @@ To automatically fix E501 issues:
 ```bash
 uv run ruff format
 ```
-
-### Configuration
-
-Ruff is configured in `pyproject.toml` with the following settings:
-- Line length: 80 characters
-- Python version: 3.11

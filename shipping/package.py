@@ -82,8 +82,14 @@ class Package:
 
 def sort(width, height, length, mass):
     """
-    Sort a package into one of three categories based on
+    Sort a package into one of three categories based on the dimensions and weight
+    of the package.
+
+    Args:
+        width (float): Width of the package in centimeters
+        height (float): Height of the package in centimeters
+        length (float): Length of the package in centimeters
+        mass (float): Weight of the package in kilograms
     """
     package = Package(width, height, length, mass)
-
     return package.sort()

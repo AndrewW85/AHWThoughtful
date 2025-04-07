@@ -1,6 +1,7 @@
 import unittest
 
-from shipping.package import Package, Stacks
+from shipping.package import Package, Stacks, sort
+
 
 class TestPackage(unittest.TestCase):
     def setUp(self):
@@ -53,8 +54,53 @@ class TestPackage(unittest.TestCase):
         print(self.standard_package.sort())
         self.assertEqual(self.standard_package.sort(), Stacks.STANDARD.value)
         self.assertEqual(self.bulky_volume_package.sort(), Stacks.SPECIAL.value)
-        self.assertEqual(self.bulky_dimension_package.sort(), Stacks.SPECIAL.value)
+        self.assertEqual(
+            self.bulky_dimension_package.sort(), Stacks.SPECIAL.value
+        )
         self.assertEqual(self.rejected_package.sort(), Stacks.REJECTED.value)
+
+    def test_sort_function(self):
+        """
+        Test the sort() function by using the dimensions and weight of the
+        packages defined in the setUp() method to allow testing the function
+        rather than the sort() method on the Package class.
+        """
+        self.assertEqual(
+            sort(
+                self.standard_package.width,
+                self.standard_package.height,
+                self.standard_package.length,
+                self.standard_package.weight,
+            ),
+            Stacks.STANDARD.value,
+        )
+        self.assertEqual(
+            sort(
+                self.bulky_volume_package.width,
+                self.bulky_volume_package.height,
+                self.bulky_volume_package.length,
+                self.bulky_volume_package.weight,
+            ),
+            Stacks.SPECIAL.value,
+        )
+        self.assertEqual(
+            sort(
+                self.bulky_dimension_package.width,
+                self.bulky_dimension_package.height,
+                self.bulky_dimension_package.length,
+                self.bulky_dimension_package.weight,
+            ),
+            Stacks.SPECIAL.value,
+        )
+        self.assertEqual(
+            sort(
+                self.rejected_package.width,
+                self.rejected_package.height,
+                self.rejected_package.length,
+                self.rejected_package.weight,
+            ),
+            Stacks.REJECTED.value,
+        )
 
 
 if __name__ == "__main__":
