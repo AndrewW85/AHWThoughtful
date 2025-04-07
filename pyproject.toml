@@ -18,7 +18,8 @@ include = ["shipping*"]
 
 [dependency-groups]
 dev = [
-    "ruff>=0.1.0"
+    "ruff>=0.1.0",
+    "coverage>=7.0.0"
 ]
 
 [tool.ruff]
